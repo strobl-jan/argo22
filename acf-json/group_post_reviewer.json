@@ -1,0 +1,35 @@
+{
+  "key": "group_teamth_post_reviewer",
+  "title": "Post Reviewer",
+  "fields": [
+    {
+      "key": "field_teamth_reviewer",
+      "label": "Reviewer",
+      "name": "reviewer",
+      "type": "post_object",
+      "instructions": "Vyberte recenzenta (Team Member), který souvisí s tímto příspěvkem.",
+      "required": 0,
+      "wrapper": { "width": "", "class": "", "id": "" },
+      "post_type": [ "team_member" ],
+      "taxonomy": "",
+      "allow_null": 1,
+      "multiple": 0,
+      "return_format": "id",
+      "ui": 1
+    }
+  ],
+  "location": [
+    [
+      { "param": "post_type", "operator": "==", "value": "post" }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "side",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": [],
+  "active": true,
+  "description": "",
+  "modified": 1730659202
+}

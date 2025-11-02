@@ -1,0 +1,91 @@
+=== TeamTh – test task / ACF bloky + CPT ===
+Autor: Jan Štrobl
+Verze: 1.0.0
+
+Minimalistická WP šablona, která dělá přesně to, co bylo v zadání:
+- nový Custom Post Type "Team Members"
+- dva ACF bloky (Detail + Grid)
+- napojení na Reviewer pole u příspěvků
+- Tailwind pro základní vzhled
+
+------------------------------------------------------------
+INSTALACE
+------------------------------------------------------------
+
+1. Nainstaluj čistý WordPress.
+2. Aktivuj ACF Pro (nutné kvůli ACF block API).
+3. Nakopíruj složku "teamth" do /wp-content/themes/.
+4. Aktivuj šablonu v administraci (Vzhled → Témata).
+5. Hotovo – WP si sám načte ACF field groupy z /acf-json.
+
+------------------------------------------------------------
+CO TO UMÍ
+------------------------------------------------------------
+
+1) CUSTOM POST TYPE
+   - Team Members (v menu vlevo)
+   - Pole:
+     • Position – text
+     • Description – WYSIWYG
+     • Profile Image – obrázek
+     • Phone – text
+     • E-mail – povinný
+     (Title funguje jako jméno)
+
+2) ACF POLE U ČLÁNKŮ
+   - Každý post má pole Reviewer, kde vybereš člena týmu.
+
+3) BLOKY V GUTENBERGU
+   - Team Member Detail
+       Vybereš jednoho člena → vypíše se fotka, popis, kontakty
+       Pod tím 5 nejnovějších článků, kde je jako reviewer.
+   - Team Member Grid
+       Mřížka členů (všichni nebo vybraní)
+       Nastavení: počet sloupců (2/3/4) + zobrazit pozici.
+
+------------------------------------------------------------
+STYLOVÁNÍ
+------------------------------------------------------------
+
+- TailwindCSS načtený přes CDN (rychlé řešení).
+- Design čistý: kruhové fotky, jednoduché karty, decentní hover.
+- Pokud by šlo do produkce, šel by přidat build přes PostCSS + purge.
+
+------------------------------------------------------------
+STRUKTURA SLOŽEK
+------------------------------------------------------------
+
+teamth/
+acf-json/                 definice field group (načítá se automaticky)
+inc/
+    -helpers.php            logika a dotazy pro reviewery
+template-parts/
+    -blocks/
+        -team-member-detail.php
+        -team-member-grid.php
+functions.php             registrace CPT, bloků, stylů
+style.css                 meta info o šabloně
+index.php                 základní výpis (frontend)
+
+------------------------------------------------------------
+POUŽITÍ
+------------------------------------------------------------
+
+1. Přidej pár "Team Members".
+2. U článku nastav Reviewer.
+3. Na stránce vlož blok Team Member Detail a vyber člena.
+4. Nebo vlož blok Team Member Grid pro mřížku členů.
+
+------------------------------------------------------------
+POZNÁMKY
+------------------------------------------------------------
+
+- Funguje čistě na ACF Pro + jádro WP.
+- Žádné další pluginy nejsou potřeba.
+- Je to funkční prototyp / test verze
+
+------------------------------------------------------------
+AUTOR
+------------------------------------------------------------
+
+Jan Štrobl

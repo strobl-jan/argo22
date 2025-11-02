@@ -1,0 +1,94 @@
+{
+  "key": "group_teamth_team_member_fields",
+  "title": "Team Member Fields",
+  "fields": [
+    {
+      "key": "field_teamth_position",
+      "label": "Position",
+      "name": "position",
+      "type": "text",
+      "instructions": "",
+      "required": 1,
+      "wrapper": { "width": "", "class": "", "id": "" },
+      "default_value": "",
+      "placeholder": "e.g. Project Manager",
+      "prepend": "",
+      "append": "",
+      "maxlength": ""
+    },
+    {
+      "key": "field_teamth_description",
+      "label": "Description",
+      "name": "description",
+      "type": "wysiwyg",
+      "instructions": "",
+      "required": 0,
+      "wrapper": { "width": "", "class": "", "id": "" },
+      "default_value": "",
+      "tabs": "all",
+      "toolbar": "full",
+      "media_upload": 0,
+      "delay": 0
+    },
+    {
+      "key": "field_teamth_profile_image",
+      "label": "Profile Image",
+      "name": "profile_image",
+      "type": "image",
+      "instructions": "",
+      "required": 0,
+      "wrapper": { "width": "", "class": "", "id": "" },
+      "return_format": "id",
+      "preview_size": "medium",
+      "library": "all",
+      "min_width": 0,
+      "min_height": 0,
+      "min_size": 0,
+      "max_width": 0,
+      "max_height": 0,
+      "max_size": 0,
+      "mime_types": ""
+    },
+    {
+      "key": "field_teamth_phone",
+      "label": "Phone",
+      "name": "phone",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "wrapper": { "width": "", "class": "", "id": "" },
+      "default_value": "",
+      "placeholder": "+420 123 456 789",
+      "prepend": "",
+      "append": "",
+      "maxlength": ""
+    },
+    {
+      "key": "field_teamth_email",
+      "label": "E-mail",
+      "name": "email",
+      "type": "email",
+      "instructions": "",
+      "required": 1,
+      "wrapper": { "width": "", "class": "", "id": "" },
+      "default_value": "",
+      "placeholder": "name@example.com",
+      "prepend": "",
+      "append": ""
+    }
+  ],
+  "location": [
+    [
+      { "param": "post_type", "operator": "==", "value": "team_member" }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": [],
+  "active": true,
+  "description": "",
+  "modified": 1730659201
+}

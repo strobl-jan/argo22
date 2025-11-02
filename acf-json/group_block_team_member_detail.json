@@ -1,0 +1,35 @@
+{
+  "key": "group_teamth_block_team_member_detail",
+  "title": "Block: Team Member Detail",
+  "fields": [
+    {
+      "key": "field_teamth_block_detail_member",
+      "label": "Member",
+      "name": "member",
+      "type": "post_object",
+      "instructions": "Vyberte team membera, jehož detail se má zobrazit.",
+      "required": 1,
+      "wrapper": { "width": "", "class": "", "id": "" },
+      "post_type": [ "team_member" ],
+      "taxonomy": "",
+      "allow_null": 0,
+      "multiple": 0,
+      "return_format": "id",
+      "ui": 1
+    }
+  ],
+  "location": [
+    [
+      { "param": "block", "operator": "==", "value": "acf/team-member-detail" }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": [],
+  "active": true,
+  "description": "",
+  "modified": 1730659203
+}

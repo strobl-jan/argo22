@@ -1,0 +1,67 @@
+{
+  "key": "group_teamth_block_team_member_grid",
+  "title": "Block: Team Member Grid",
+  "fields": [
+    {
+      "key": "field_teamth_block_grid_members",
+      "label": "Members",
+      "name": "members",
+      "type": "relationship",
+      "instructions": "Volitelné: vyberte konkrétní členy. Když zůstane prázdné, zobrazí všechny publikované.",
+      "required": 0,
+      "wrapper": { "width": "", "class": "", "id": "" },
+      "post_type": [ "team_member" ],
+      "taxonomy": "",
+      "filters": [ "search", "post_type" ],
+      "elements": "",
+      "min": 0,
+      "max": 0,
+      "return_format": "id"
+    },
+    {
+      "key": "field_teamth_block_grid_columns",
+      "label": "Number of Columns",
+      "name": "columns",
+      "type": "select",
+      "instructions": "Počet sloupců v mřížce (2, 3 nebo 4).",
+      "required": 0,
+      "wrapper": { "width": "", "class": "", "id": "" },
+      "choices": { "2": "2", "3": "3", "4": "4" },
+      "default_value": "",
+      "return_format": "value",
+      "multiple": 0,
+      "allow_null": 1,
+      "ui": 0,
+      "ajax": 0,
+      "placeholder": ""
+    },
+    {
+      "key": "field_teamth_block_grid_show_position",
+      "label": "Display Position",
+      "name": "show_position",
+      "type": "true_false",
+      "instructions": "Zobrazit pozici u každého člena.",
+      "required": 0,
+      "wrapper": { "width": "", "class": "", "id": "" },
+      "message": "",
+      "default_value": 1,
+      "ui": 1,
+      "ui_on_text": "Ano",
+      "ui_off_text": "Ne"
+    }
+  ],
+  "location": [
+    [
+      { "param": "block", "operator": "==", "value": "acf/team-member-grid" }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": [],
+  "active": true,
+  "description": "",
+  "modified": 1730659204
+}
