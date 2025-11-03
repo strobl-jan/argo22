@@ -3,3 +3,7 @@ Theme Name: TeamTh
 Author: Jan Štrobl
 Version: 1.0.0
 */
+/* Accent tweaks */
+::selection { background: #FACC15; color: #0f172a; }
+a { color: #0f172a; }
+a:hover { text-decoration: underline; text-decoration-color: #FACC15; text-underline-offset: 2px; }

@@ -20,16 +20,44 @@ add_action('after_setup_theme', function () {
  Tailwind
  */
 add_action('wp_enqueue_scripts', function () {
-    // TailwindCDN
-    wp_enqueue_style(
+    wp_enqueue_script(
         'teamth-tailwind',
-        'https://cdn.jsdelivr.net/npm/tailwindcss@3.4.14/dist/tailwind.min.css',
+        'https://cdn.tailwindcss.com',
         [],
-        null
+        null,
+        false
     );
 
-    wp_enqueue_style('teamth-style', get_stylesheet_uri(), ['teamth-tailwind'], TEAMTH_VERSION);
+    // Konfigurace: světlý UI + výrazná žlutá (brand)
+    wp_add_inline_script(
+        'teamth-tailwind',
+        'window.tailwind = window.tailwind || {};
+         window.tailwind.config = {
+           darkMode: false,
+           theme: {
+             extend: {
+               colors: {
+                 brand: {
+                   DEFAULT: "#FACC15",   // žlutá 400
+                   dark: "#EAB308"       // žlutá 500
+                 }
+               },
+               boxShadow: {
+                 card: "0 8px 24px rgba(2, 6, 23, 0.06)"
+               },
+               borderRadius: {
+                 xl: "0.75rem",
+                 "2xl": "1rem"
+               }
+             }
+           }
+         };',
+        'before'
+    );
+
+    wp_enqueue_style('teamth-style', get_stylesheet_uri(), [], TEAMTH_VERSION);
 });
+
 
 /**
  * CPT
@@ -58,8 +86,8 @@ add_action('init', function () {
         'menu_position'      => 20,
         'menu_icon'          => 'dashicons-groups',
         'supports'           => ['title', 'thumbnail'],
-        'has_archive'        => false,
-        'rewrite'            => ['slug' => 'team-members'],
+        'has_archive'  => false,
+        'rewrite'      => ['slug' => 'team', 'with_front' => false],
         'show_in_rest'       => true,
     ]);
 });
